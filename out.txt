@@ -1,11 +1,11 @@
 Enter the number of vacancies: Enter the number of votes: Enter the number of candidates: Enter the names of the candidates (space-separated): Enter the votes (space-/line-separated): 
 
 == RESULTS ==
-Loser: AmeeraFerrell (0.000000)
-Loser: VanessaPacheco (0.000000)
-Loser: TraciFrye (0.000000)
-Loser: InayahTrevino (1.000000)
-Loser: JoseBishop (1.000000)
-Loser: AntonyMorrow (2.000000)
-Winner: JadenWall (4.000000)
-Winner: ClarkMitchell (4.333333)
+Loser: TraciFrye (1.000000)
+Loser: InayahTrevino (3.000000)
+Winner: JoseBishop (8.000000)
+Loser: AmeeraFerrell (4.000000)
+Loser: ClarkMitchell (5.075000)
+Winner: AntonyMorrow (10.225000)
+Winner: JadenWall (8.978423)
+Winner: VanessaPacheco (9.800000)
