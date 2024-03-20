@@ -1,5 +1,13 @@
 # hare-clark-cpp
 
+Hare-Clark is an electoral system used in Tasmania and the Australian Capital Territory. To read more on how the preferential votes are distributed, please refer to [the Wikipedia article](https://en.wikipedia.org/wiki/Hare%E2%80%93Clark_electoral_system), which is what this implementation is mostly based off of.
+
+Additional sources:
+* https://www.tec.tas.gov.au/info/Publications/HareClark.html
+* https://www.aec.gov.au/learn/files/poster-count-senate-pref-voting.pdf
+* https://www.aec.gov.au/learn/files/poster-counting-hor-pref-voting.pdf
+* https://facultycouncil.utexas.edu/hare-clark-preferential-voting-system
+
 ## Usage
 
 ### Build
@@ -95,6 +103,8 @@ which will store the results in `out.txt`.
 
 ## Miscellaneous
 
+### Example
+
 Names from the examples were generated with https://www.name-generator.org.uk/quick/
 
 Ballots were generated with the following script, which, with a time complexity of $O(rc^2)$, is so slow that I don't think it deserves a file on its own:
@@ -113,3 +123,9 @@ for i in range(int(row)):
         print(rn, end=" ")
     print()
 ```
+
+### Motivation
+
+In the 2024 University of Adelaide Computer Science Club SGM election, the committee attempted to use the `hcvote` Python library for calculation of the election results, which initially seemed successful, but there was much push back for the results as a few of the elected positions seemed to go against what someone would assume from just looking at the graphs.
+
+As a committee member, I coded up this implementation as a sanity check, which turned out to have completely different results. Confused, I alongside another committee member looked into the the Jupyter Notebook used by the committee and the source code of the library, and we found out that not only was the way that the Notebook was inputting the data incorrect, but the library was misprocessing data and also didn't adhere to online descriptions of the system. In the end, we were able to fix the Jupyter Notebook and the library such that the results were consistent with this implementation, and I hope that this code will save future election boards from the same pain that we experienced.
