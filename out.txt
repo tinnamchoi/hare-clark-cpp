@@ -1,0 +1,12 @@
+Enter the number of vacancies: Enter the number of votes: Quota: 3.66667
+Enter the number of candidates: Enter the names of the candidates (space-separated): Enter the votes (space-/line-separated): 
+
+== RESULTS ==
+Loser: AmeeraFerrell (0.000000)
+Loser: VanessaPacheco (0.000000)
+Loser: TraciFrye (0.000000)
+Loser: InayahTrevino (1.000000)
+Loser: JoseBishop (1.000000)
+Loser: AntonyMorrow (2.000000)
+Winner: JadenWall (4.000000)
+Winner: ClarkMitchell (4.333333)
