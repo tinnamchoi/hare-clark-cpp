@@ -66,7 +66,6 @@ which will prompt you for the necessary information and print the results in the
 ./a.out
 Enter the number of vacancies: 2
 Enter the number of votes: 8
-Quota: 3.66667
 Enter the number of candidates: 8
 Enter the names of the candidates (space-separated): JadenWall InayahTrevino ClarkMitchell AmeeraFerrell AntonyMorrow JoseBishop VanessaPacheco TraciFrye
 Enter the votes (space-/line-separated): 

@@ -13,7 +13,7 @@ int main() {
   cin >> votes_n;
   
   double quota = (double)votes_n / (vacancies + 1) + 1;
-  cout << "Quota: " << quota << endl;
+  // cout << "Quota: " << quota << endl;
   
   int candidates_n;
   cout << "Enter the number of candidates: ";

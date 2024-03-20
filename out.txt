@@ -1,5 +1,4 @@
-Enter the number of vacancies: Enter the number of votes: Quota: 3.66667
-Enter the number of candidates: Enter the names of the candidates (space-separated): Enter the votes (space-/line-separated): 
+Enter the number of vacancies: Enter the number of votes: Enter the number of candidates: Enter the names of the candidates (space-separated): Enter the votes (space-/line-separated): 
 
 == RESULTS ==
 Loser: AmeeraFerrell (0.000000)
