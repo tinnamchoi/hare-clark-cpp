@@ -1,8 +1,14 @@
+.PHONY: build
+
 build:
-	g++ -std=c++20 -O2 -Wall main.cpp
+	cmake -B build
+	cmake --build build
 
 run:
-	./a.out
+	./build/hare-clark
 
-test:
-	time cat in.txt | ./a.out > out.txt
+run-tests:
+	time cat tests/in.txt | ./build/hare-clark > tests/out.txt
+
+clean:
+	rm -r build
