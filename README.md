@@ -55,3 +55,11 @@ Run the Hare-Clark process
 ## Examples
 
 For a practical example of the library being applied, see [example/README.md](example/README.md)
+
+## Complexity analysis
+
+* Let $v$, $b$, and $c$ be the number of vacancies, ballots, and candidates respectively.
+* `HareClark()` uses $O(1)$ time as it only has a single variable assignment
+* `add_candidates()` uses $O(c)$ time as it has to insert each of the $c$ candidates to the private variable
+* `add_ballots()` uses $O(bc)$ time as each ballot must have exactly $c$ values, and each of the $b$ ballots must be inserted to the private variable
+* `run()` It takes $O(bc)$ time and auxilliary space for preprocessing and creating a copy of the private variables. It will then take $O(bb+bc)$ time to calculate the results. $O(bb)$ since there can be a maximum of $b$ loops which each go through each of the $b$ ballots, and an additional $O(bc)$ since there can be at most $bc$ `pop_back()` operations on the ballots. Note that it is not $O(bbc)$ despite there being $O(b)$ calls to an $O(bc)$ function (`process_candidate()`) as the `pop_back()` operations are amortized. 
