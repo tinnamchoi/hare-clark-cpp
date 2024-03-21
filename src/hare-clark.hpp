@@ -52,7 +52,7 @@ class HareClark {
    *
    * @param ballots List of ballots to be added
    * @details Each ballot is a list of integers, where each integer represents the index of the candidate in the list of candidates.
-   * @details e.g. with a candidate list of {"A", "B", "C"}, a ballot of {2, 0, 1} would represent a ballot with "C" as the first preference, "A" as the second preference, and "B" as the third preference.
+   * @details e.g. with a candidate list of `{"A", "B", "C"}`, a ballot of `{2, 0, 1}` would represent a ballot with "C" as the first preference, "A" as the second preference, and "B" as the third preference.
    */
   void add_ballots(std::vector<std::vector<int>> ballots) {
     for (std::vector<int>& ballot : ballots) std::reverse(ballot.begin(), ballot.end());
