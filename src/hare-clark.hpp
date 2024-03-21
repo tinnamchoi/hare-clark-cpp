@@ -75,7 +75,7 @@ class HareClark {
     std::vector<double> votes(candidates.size()); // Current value of votes for each candidate
     for (const auto& [ballot, weight] : ballots_with_weights) votes[ballot.back()] += weight;
     
-    while (number_of_vacancies) {
+    while (number_of_vacancies < candidates.size() - unavailable_candidates.size()) {
       int winner = -1;
       int loser = -1;
       for (int i = 0; i < candidates.size(); ++i) {
@@ -96,6 +96,9 @@ class HareClark {
         process_candidate(loser, unavailable_candidates, ballots_with_weights, votes);
         votes[loser] = -1;
       }
+    }
+    if (number_of_vacancies) {
+      for (int i = 0; i < candidates.size(); ++i) if (!unavailable_candidates.count(i)) elected_candidates.push_back(candidates[i]);
     }
     return elected_candidates;
   }
