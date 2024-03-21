@@ -7,7 +7,7 @@ build:
 run:
 	./build/example
 
-test:
+run-tests:
 	cat tests/in.txt | ./build/example | head -n 1000 > tests/out.txt
 
 clean:
