@@ -1,0 +1,3 @@
+Enter the number of vacancies: Enter the number of votes: Enter the number of candidates: Enter the names of the candidates (space-separated): Enter the ballots (space-/line-separated): 
+
+Elected candidates: JoseBishop AntonyMorrow JadenWall VanessaPacheco 
