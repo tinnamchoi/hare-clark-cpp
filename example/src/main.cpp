@@ -2,7 +2,7 @@
 using namespace std;
 #define all(x) (x).begin(), (x).end()
 
-#include "hare-clark.h"
+#include "hare-clark.hpp"
 
 int main() {
   int number_of_vacancies;
