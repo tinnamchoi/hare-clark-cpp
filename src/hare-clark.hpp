@@ -23,7 +23,7 @@ class HareClark {
   void process_candidate(int candidate, std::unordered_set<int>& unavailable_candidates, std::vector<std::pair<std::vector<int>, double>>& ballots_with_weights, std::vector<double>& votes, double transfer_value = 1) {
     unavailable_candidates.insert(candidate);
     votes[candidate] = -1;
-    for (auto& [ballot, weight] : ballots_with_weights) if (ballot.back() == candidate) {
+    for (auto& [ballot, weight] : ballots_with_weights) if (ballot.size() && ballot.back() == candidate) {
       weight *= transfer_value;
       while (ballot.size() > 1 && unavailable_candidates.count(ballot.back())) ballot.pop_back();
       if (ballot.size()) votes[ballot.back()] += weight;
@@ -73,7 +73,7 @@ class HareClark {
     for (const std::vector<int>& ballot : ballots) ballots_with_weights.push_back({ballot, 1});
     
     std::vector<double> votes(candidates.size()); // Current value of votes for each candidate
-    for (const auto& [ballot, weight] : ballots_with_weights) votes[ballot.back()] += weight;
+    for (const auto& [ballot, weight] : ballots_with_weights) if (ballot.size()) votes[ballot.back()] += weight;
     
     while (number_of_vacancies < candidates.size() - unavailable_candidates.size()) {
       int winner = -1;

@@ -41,6 +41,8 @@ The numbers are only relative to each other within the ballot, meaning the follo
 
 This allows for a relatively easy removal of candidate(s).
 
+Null votes can be represented by `-1`.
+
 ### Running it
 
 For an interactive experience, do
