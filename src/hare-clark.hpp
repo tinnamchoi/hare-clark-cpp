@@ -83,6 +83,11 @@ class HareClark {
         if (winner == -1 || votes[i] > votes[winner]) winner = i;
         if (loser == -1 || votes[i] < votes[loser]) loser = i;
       }
+      // If there's a tie, give up because Hare-Clark doesn't have a tie-breaking mechanism
+      if (votes[winner] == votes[loser]) {
+        std::cout << "Warning: There is a tie" << std::endl;
+        break;
+      }
       // If the winner has more votes than the quota, they are elected
       if (votes[winner] > quota) {
         double surplus = votes[winner] - quota;
