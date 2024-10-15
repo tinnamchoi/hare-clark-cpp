@@ -28,7 +28,7 @@ int main() {
   vector<vector<int>> sorted_ballots(number_of_votes, vector<int> (number_of_candidates));
   for (int i = 0; i < number_of_votes; ++i) {
     iota(all(sorted_ballots[i]), 0);
-    sort(all(sorted_ballots[i]), [&](int a, int b) { return ballots[i][b] == -1 || ballots[i][a] != -1 && ballots[i][a] < ballots[i][b]; });
+    sort(all(sorted_ballots[i]), [&](int a, int b) { return ballots[i][a] != -1 && (ballots[i][b] == -1 || ballots[i][a] < ballots[i][b]); });
     while (sorted_ballots[i].size() && ballots[i][sorted_ballots[i].back()] == -1) sorted_ballots[i].pop_back();
   }
   
