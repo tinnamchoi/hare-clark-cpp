@@ -25,7 +25,7 @@ class HareClark {
     votes[candidate] = -1;
     for (auto& [ballot, weight] : ballots_with_weights) if (ballot.size() && ballot.back() == candidate) {
       weight *= transfer_value;
-      while (ballot.size() > 1 && unavailable_candidates.count(ballot.back())) ballot.pop_back();
+      while (ballot.size() && unavailable_candidates.count(ballot.back())) ballot.pop_back();
       if (ballot.size()) votes[ballot.back()] += weight;
     }
   }
