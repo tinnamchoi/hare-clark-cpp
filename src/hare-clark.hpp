@@ -80,11 +80,11 @@ class HareClark {
       int loser = -1;
       for (int i = 0; i < candidates.size(); ++i) {
         if (unavailable_candidates.count(i)) continue;
-        if (winner == -1 || votes[i] > votes[winner]) winner = i;
+        if (winner == -1 || votes[i] >= votes[winner]) winner = i;
         if (loser == -1 || votes[i] < votes[loser]) loser = i;
       }
       // If there's a tie, give up because Hare-Clark doesn't have a tie-breaking mechanism
-      if (votes[winner] == votes[loser]) {
+      if (votes[winner] == votes[loser] && winner != loser) {
         std::cout << "Warning: There is a tie" << std::endl;
         break;
       }
